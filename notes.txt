@@ -1,0 +1,16 @@
+Shazam Devs,
+
+I used the NewsFeedAcceptance test as an acceptance test that could have been written by involving non technical product owners as to what the requirements of the application would be.
+
+I wrote a validation class to handle the validation since I think it is cleaner this way because you avoid booleans and if elses and you can customise your exception to add error codes etc.
+
+I assumed that if there is no purchase url for the correct store then do not show a purchase URl.
+
+If I wanted to improve this you could extend the app to capture the json fragments that failed to parse and write them out to an error file then continue parsing the items that can be read, instead at the moment the app will fail with an error message if it fails to deserialize the data. i.e. if there is an unknown event type.
+
+I've inverted the dependencies so I could inject the dependencies where needed as this helped testing. That is why I've instansiated some of the classes in NewsFeed. 
+
+Darren
+
+
+
